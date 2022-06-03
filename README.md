@@ -1,2 +1,2 @@
 # rusty-paper
-A live wallpaper engine for macos written in rust
+A live wallpaper engine for macos written in Electron, Don't Kill me AppleSause
