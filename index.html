@@ -1,0 +1,30 @@
+<html>
+    <body onload="startTime()"></body>
+    <script>
+        function startTime() {
+          const today = new Date();
+          let h = today.getHours();
+          let m = today.getMinutes();
+          m = checkTime(m);
+          document.getElementById('txt').innerHTML =  h + ":" + m ;
+          setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+    <canvas class="glslCanvas" data-fragment-url="shader.frag" width="500" height="500"></canvas>
+
+    <div class="content">
+        <h1 id="txt">100:00:00</h1>
+    </div>
+   <!-- 
+       <video autoplay muted loop id="myVideo">
+        <source src="black.mp4" type="video/mp4">
+      </video> 
+    -->
+</html>
